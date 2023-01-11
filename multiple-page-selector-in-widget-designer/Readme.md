@@ -182,13 +182,44 @@ You can update the tab heading here:
 4. Done selecting 
 4. Save changes
 
-
 That's it!
+<br />
+<br />
 <br />
 
 
 ##### __Select additional pages tab in the designer__
-![alt text](../../ensodx/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/select-additional-pages-tab.png)
+<br />
+
+![alt text](https://raw.githubusercontent.com/ensodx/ensodx/main/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/select-additional-pages-tab.png)
+
+<br />
+
+##### __Select one or multiple Sitefinity pages__
+<br />
+
+![alt text](https://raw.githubusercontent.com/ensodx/ensodx/main/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/select-sitefinity-page.png)
+
+<br />
+
+##### __Selected Sitefinity page or pages__
+<br />
+
+![alt text](https://raw.githubusercontent.com/ensodx/ensodx/main/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/selected-sitefinity-pages.png)
+
+<br />
+
+##### __Add external urls__
+<br />
+
+![alt text](https://raw.githubusercontent.com/ensodx/ensodx/main/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/select-external-urls.png)
+
+<br />
+
+##### __Added external urls__
+<br />
+
+![alt text](https://raw.githubusercontent.com/ensodx/ensodx/main/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/selected-external-urls.png)
 
 <br />
 
