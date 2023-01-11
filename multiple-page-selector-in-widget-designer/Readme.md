@@ -2,12 +2,12 @@
 
 - [Summary](#Summary)
 - [Installation](#Installation)
-- [Additional details](#Details)
+- [Details](#Details)
 - [Usage](#Usage)
 - [License](#License)
 - [EnsoDX](#EnsoDX)
 
-### Additional details
+
 ---
 ### Summary
 ---
@@ -39,10 +39,12 @@ If you are extending other content type widget designers or custom widget design
 ---
 
 <br />
+
 **Model/Controller**
 <br />
 <br />
 In the Model (or in the Controller if you are developing a custom widget) add the public properties:
+<br />
 
     public string SelectedPageLinksItems { get; set; }
     public string SelectedPageLinksIds { get; set; }
