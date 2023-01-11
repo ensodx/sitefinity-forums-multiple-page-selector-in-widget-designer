@@ -99,7 +99,7 @@
       true
     );
 
-    // end start custom multiple page selector
+    // end custom multiple page selector
 
     $scope.updateSortOption = function (newSortOption) {
       if (newSortOption !== "Custom") {
