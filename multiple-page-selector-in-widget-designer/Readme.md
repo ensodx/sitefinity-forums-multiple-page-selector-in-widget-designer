@@ -185,6 +185,11 @@ You can update the tab heading here:
 
 That's it!
 <br />
+
+
+##### __Select additional pages tab in the designer__
+![alt text](../../ensodx/assets/sitefinity-samples/multiple-page-selector-in-widget-designer/select-additional-pages-tab.png)
+
 <br />
 
 ---
