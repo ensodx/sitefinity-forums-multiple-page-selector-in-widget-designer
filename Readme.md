@@ -13,9 +13,12 @@
 ---
 
 <br />
-This sample contains a sample that extends the built-in News widget designer with a new tab that has a page selector where you can select multiple Sitefinity pages or you can add multiple external links
+
+This sample is in reference to an answer to a [Sitefinty forum post](https://community.progress.com/s/question/0D54Q0000A1HGv0SQG/sflistselectorsfpageselector-cant-save-external-urls). 
+
+It contains a sample that extends the built-in News widget designer with a new tab that has a page selector where you can select multiple Sitefinity pages and/or you can add multiple external links
 <br />
-It can be used as a reference for any other content type designers including custom widget designer.
+It can be used as a reference for any other content type designers including custom widget designers.
 <br />
 The sample is developed with Sitefinity 14.3 but should work without any issues with older Sitefinity versions too.
 <br />
@@ -56,7 +59,8 @@ In the Model (or in the Controller if you are developing a custom widget) add th
 **DesignerView.Simple.json**
 <br />
 <br />
-In the DesignerView.Simple.json in the components add the "sf-page-selector"
+
+In the DesignerView.Simple.json in the **components** add the **"sf-page-selector"**
 <br />
 
     {
@@ -70,14 +74,16 @@ In the DesignerView.Simple.json in the components add the "sf-page-selector"
 **designerview-simple.js**
 
 <br />
-In the designerview-simple.js make sure you have the sfSelectors in the list of designer module dependencies.
+
+In the designerview-simple.js make sure you have the **sfSelectors** in the list of designer module dependencies.
 <br />
 <br />
 
     angular.module('designer').requires.push('expander', 'sfSelectors');
 
 <br />
-Define a local scope variable for the page selector called pageLinksSelector and initialize it as an object with 2 empty array fields named selectedPageLinksIds and selectedPageLinksItems:
+
+Define a local scope variable for the page selector called **pageLinksSelector** and initialize it as an object with 2 empty array fields named **selectedPageLinksIds** and **selectedPageLinksItems**:
 <br />
 <br />
 
@@ -87,7 +93,8 @@ Define a local scope variable for the page selector called pageLinksSelector and
     };
 
 <br />
-Add $scope.watchCollection functions to watch when the pageLinksSelector.selectedPageLinksIds and pageLinksSelector.selectedPageLinksItems change and if there is a change update the respective stringified server properties (the ones we added in the Model/Controller - StringifiedPageLinksIds and StringifiedPageLinksItems) with the updated and stringified array of pageLinksIds and pageLinksItems so Sitefinity can persist the string values in the database after we click Save changes in the designer:
+
+Add **$scope.watchCollection** functions to watch when the **pageLinksSelector.selectedPageLinksIds** and **pageLinksSelector.selectedPageLinksItems** change and if there is a change update the respective stringified server properties (the ones we added in the Model/Controller - **StringifiedPageLinksIds** and **StringifiedPageLinksItems**) with the updated and stringified array of **pageLinksIds** and **pageLinksItems** so Sitefinity can persist the string values in the database after we click Save changes in the designer:
 <br />
 <br />
 
@@ -113,7 +120,7 @@ Add $scope.watchCollection functions to watch when the pageLinksSelector.selecte
 
 <br />
 
-In the propertyService.get() method (it triggers when the designer is opened and passes the widget properties to the widget designer) update the values of the selectedPageLinksIds and selectedPageLinksItems arrays by parsing the stringified values into a JSON so Sitefinity can properly visualize them in the designer:
+In the **propertyService.get()** method (it triggers when the designer is opened and passes the widget properties to the widget designer) update the values of the **selectedPageLinksIds** and **selectedPageLinksItems** arrays by parsing the stringified values into a JSON so Sitefinity can properly visualize them in the designer:
 <br />
 <br />
 
@@ -141,11 +148,14 @@ In the propertyService.get() method (it triggers when the designer is opened and
 **DesignerView.Simple.cshtml**
 
 <br />
-In the DesignerView.Simple.cshtml we bind the local scoper variable we defined in the designerview-simple.js to the sf-list-selector properties.
+
+In the DesignerView.Simple.cshtml we bind the local scoper variable we defined in the designerview-simple.js to the **sf-list-selector** properties.
 <br />
-We bind the pageLinksSelector.selectedPageLinksIds variable to the sf-selected-ids property of the selector.
+
+We bind the **pageLinksSelector.selectedPageLinksIds** variable to the **sf-selected-ids** property of the selector.
 <br />
-And we bind the pageLinksSelector.selectedPageLinksItems variable to the sf-selected-items property of the selector.
+
+And we bind the **pageLinksSelector.selectedPageLinksItems** variable to the **sf-selected-items** property of the selector.
 <br />
 <br />
 
