@@ -71,7 +71,11 @@ In the DesignerView.Simple.json in the components add the "sf-page-selector"
 
 <br />
 In the designerview-simple.js make sure you have the sfSelectors in the list of designer module dependencies.
+<br />
+<br />
+
     angular.module('designer').requires.push('expander', 'sfSelectors');
+
 <br />
 Define a local scope variable for the page selector called pageLinksSelector and initialize it as an object with 2 empty array fields named selectedPageLinksIds and selectedPageLinksItems:
 <br />
